@@ -1,70 +1,65 @@
 
-let player= 0;
+let player = 0;
 let computer = 0;
 
+
 function computerPlay() {
-    choice = Math.floor(Math.random() * Math.floor(3));
-   
-    if (choice==0) {
-        choice = "rock"
-    }else if (choice==1) {
-        choice = "paper"
-    } else if (choice==2){
-        choice = "sissor"
-    } else {
-    return choice;
-    
-}
-console.log(choice)
+    const hands = ["rock", "paper", "scissor"];
+
+const random = Math.floor(Math.random() * hands.length);
+//console.log(random, hands[random]);
+return hands[random]
 }
 
 
 function playRound(playerSelection, computerSelection) {
+    console.log("computer chose: " ,computerSelection)
+    console.log("player chose: ", playerSelection)
     if (playerSelection==computerSelection) {
         return "tie";
-    } else if 
-        (playerSelection == "rock" && computerSelection == "paper"||
-        playerSelection == "sissor" && computerSelection == "rock" ||
-        playerSelection == "paper" && computerSelection == "sissor") 
-        
-        {
-            computer ++;
+    } else if (
+        (computerSelection == "rock" && playerSelection == "scissor") ||
+        (computerSelection == "scissor" && playerSelection == "paper") ||
+        (computerSelection == "paper" && playerSelection == "rock")
+      ) {
+        computer++;
         return "Computer wins";
     
-        } else if 
-            (playerSelection== "paper" && computerSelection == "rock"||
-        playerSelection == "rock" && computerSelection == "sissor" ||
-        playerSelection == "sissor" && computerSelection == "paper")
-        {
-            player ++;
-        return "player wins";
         } else {
-            return 0;
-        }    
-        
-}
+           player++;
+        return "player wins";
+
+        } 
+               
+    }
 
 function game() {
     while (player < 5 && computer < 5){
-        playRound(playerSelection,computerSelection)
-        //console.log(player)
-        //console.log(computer)
+        playRound(playerSelection,computerSelection);
+        computerSelection=computerPlay();
+        console.log("playerScore: ",player)
+        console.log("computerScore: ",computer)
     }
+    
+      //console.log(playRound(playerSelection,computerSelection))
+    
+
 
     if (player == 5){
         return "winner"
+
+        
         
     
-    }else if (computer==5){
+    }else if (computer == 5){
         return "loser"
-    }else{
-        return 0;
     }
 }
 
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
 
-console.log(playRound(playerSelection, computerSelection))
-//console.log (game())
+
+const playerSelection = "rock";
+let computerSelection = computerPlay();
+//console.log(playRound(playerSelection, computerSelection))
+console.log (game())
