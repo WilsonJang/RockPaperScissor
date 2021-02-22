@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <title>Rock. Paper, Scissors</title>
   <meta charset="UTF-8"/>
 </head>
 <body>
-  <!--
-    A title
+  <div id="title">
+    Rock Paper Scissors!
+  </div>
 
-    location of buttons
+  <div id="hands" class="container">
+    <img id="rock" src="repo/assests/rock.jpg" alt="rock" onclick="rock()"> 
+    <img id="paper"src="repo/assests/paper.jpg" alt="paper" onclick="paper()"> 
+    <img id="scissor" src="repo/assests/scissor.jpg" alt="scissor" onclick="scissor()"> 
+</div>
 
-    score
+  <div id= "scoreboard"> 
+    <p>Player Score: <span id="playerScore"> </span> <br> Computer Score: <span id="computerScore"></span></p> 
+  </div>
 
-    determine if winner
+  <div id = "picks">
+    <p>
+      Computer chose: <span id="computerChose"></span>
+      <br> 
+      player chose: <span id="playerChose"></span>
+      <br>
+      <span id="computerWins"></span>
+      <span id="playerWins"></span>
+      <br>
+      <span id="tie"></span>
+    </p>
 
-    play again
+  </div>
+
+  <div id="playagain">
+    <p id="again" onclick="playagain()"> play again!</p>
+  </div>
+
+
+  <!--  
+    --A title
+
+   -- location of buttons
+
+    --score
+
+    --determine if winner
+
+   -- play again
 
   -->
   
