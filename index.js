@@ -74,11 +74,12 @@ function game() {
       //console.log(playRound(playerSelection,computerSelection))
 
     if (player == 5){
-        document.getElementById("final").innerHTML = "PLAYER WINS THE GAME! Congratulations!";  
+        document.getElementById("final").innerHTML = "PLAYER WINS THE GAME! Congratulations!"; 
+        document.getElementById("playagain").style.visibility = "visible"; 
         
     }else if (computer == 5){
         document.getElementById("final").innerHTML = "COMPUTER WINS THE GAME! Try again!"
-        
+        document.getElementById("playagain").style.visibility = "visible"; 
     }
 }
 function playagain() { //for future play again
@@ -92,6 +93,7 @@ function playagain() { //for future play again
     document.getElementById("computerChose").innerHTML = "";
     document.getElementById("playerChose").innerHTML = "";
     document.getElementById("result").innerHTML = "";
+    document.getElementById("playagain").style.visibility = "hidden"; 
 }
 
 let playerSelection = "";
