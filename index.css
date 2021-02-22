@@ -1,60 +1,70 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    background-color: black;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  font-size: 130%;
 }
 
 #title {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 5rem;
-    padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 5rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 #hands {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    padding-top: 5rem;
-    font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  padding-top: 5rem;
+  font-size: 4rem;
 }
 
 #rock {
-    height: 6rem;
-    width: 6rem;
+  height: 8rem;
+  width: 8rem;
+  margin: 20px;
 }
 #paper {
-    height: 6rem;
-    width: 6rem;
+  height: 8rem;
+  width: 8rem;
+  margin: 20px;
 }
 #scissor {
-    height: 6rem;
-    width: 6rem;
-}
-
-#playagain {
-    display: flex;
-    justify-content: center;
-    color: red;
-    padding-top: 4rem;
+  height: 8rem;
+  width: 8rem;
+  margin: 20px;
 }
 
 #scoreboard {
-    display:flex;
-    justify-content: center;
-    color: white;
-
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: 5px solid blue;
+  margin: 5px;
 }
 
 #picks {
-
-    display:flex;
-    justify-content: center;
-    color: white;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: 5px solid green;
+  margin: 5px;
 }
 
 #playagain {
-    visibility: hidden;
+display: flex;
+justify-content: center;
+margin: auto;
+  visibility: hidden;
+  width: 200px;
+  height: 85px;
+  border: 5px solid red;
+  color:red;
+  
+
 }
+.pointer {cursor: pointer;}

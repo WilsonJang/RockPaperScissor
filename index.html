@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="index.css">
-  <title>Rock. Paper, Scissors</title>
-  <meta charset="UTF-8"/>
-</head>
-<body>
-  <div id="title">
-    Rock Paper Scissors!
-  </div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Rock. Paper, Scissors</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="title">Rock Paper Scissors!</div>
 
-  <div id="hands" class="container">
-    <img id="rock" src="repo/assests/rock.jpg" alt="rock" onclick="rock()"> 
-    <img id="paper"src="repo/assests/paper.jpg" alt="paper" onclick="paper()"> 
-    <img id="scissor" src="repo/assests/scissor.jpg" alt="scissor" onclick="scissor()"> 
-</div>
+    <div id="hands" class="container pointer">
+      <img id="rock" src="repo/assests/rock.png" alt="rock" onclick="rock()" />
+      <img
+        id="paper"
+        src="repo/assests/paper.png"
+        alt="paper"
+        onclick="paper()"
+      />
+      <img
+        id="scissor"
+        src="repo/assests/scissor.png"
+        alt="scissor"
+        onclick="scissor()"
+      />
+    </div>
 
-  <div id= "scoreboard"> 
-    <p>Player Score: <span id="playerScore"> </span> <br> Computer Score: <span id="computerScore"></span></p> 
-  </div>
+    <div id="scoreboard">
+      <p>
+        Player Score: <span id="playerScore"> </span> <br />
+        Computer Score: <span id="computerScore"></span>
+      </p>
+    </div>
 
-  <div id = "picks">
-    <p>
-      Computer chose: <span id="computerChose"></span>
-      <br> 
-      player chose: <span id="playerChose"></span>
-      <br>
-      <span id="result"></span>
-      <br>
-      <span id="final"></span>
-    </p>
+    <div id="picks">
+      <p>
+        Computer selected: <span id="computerChose"></span>
+        <br />
+        Player selected: <span id="playerChose"></span>
+        <br />
+        <span id="result"></span>
+        <br />
+        <span id="final"></span>
+      </p>
+    </div>
 
-  </div>
-
-  <div id="playagain">
-    <p id="again" onclick="playagain()"> play again!</p>
-  </div>
-
-
-  <!--  
-    --A title
-
-   -- location of buttons
-
-    --score
-
-    --determine if winner
-
-   -- play again
-
-  -->
-  
+    <div id="playagain" class="pointer">
+      <p id="again" onclick="playagain()">PLAY AGAIN</p>
+    </div>
 </body>
-<script src = "index.js"> </script>
+  <script src="index.js"></script>
 </html>
