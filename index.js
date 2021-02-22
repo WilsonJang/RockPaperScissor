@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection==computerSelection) {
         document.getElementById("computerChose").innerHTML = computerSelection;
         document.getElementById("playerChose").innerHTML = playerSelection;
-        document.getElementById("tie").innerHTML = "Its a tie!";
+        document.getElementById("result").innerHTML = "Its a tie round!";
     } else if (
         (computerSelection == "rock" && playerSelection == "scissor") ||
         (computerSelection == "scissor" && playerSelection == "paper") ||
@@ -47,13 +47,13 @@ function playRound(playerSelection, computerSelection) {
         computer++;
         document.getElementById("computerChose").innerHTML = computerSelection;
         document.getElementById("playerChose").innerHTML = playerSelection;
-        document.getElementById("computerWins").innerHTML = "Computer wins!";
+        document.getElementById("result").innerHTML = "Computer wins the round!";
     
         } else {
            player++;
         document.getElementById("computerChose").innerHTML = computerSelection;
         document.getElementById("playerChose").innerHTML = playerSelection;
-        document.getElementById("playerWins").innerHTML = "Player wins!";
+        document.getElementById("result").innerHTML = "Player win the round!";
         } 
                
     }
@@ -74,10 +74,10 @@ function game() {
       //console.log(playRound(playerSelection,computerSelection))
 
     if (player == 5){
-        console.log( "winner"   )   
+        document.getElementById("final").innerHTML = "PLAYER WINS THE GAME! Congratulations!";  
         
     }else if (computer == 5){
-        console.log( "winner"   ) 
+        document.getElementById("final").innerHTML = "COMPUTER WINS THE GAME! Try again!"
         
     }
 }
@@ -86,6 +86,12 @@ function playagain() { //for future play again
     computer = 0;
     computerSelection=computerPlay();
     playerSelection="";
+    document.getElementById("playerScore").innerHTML = player;
+    document.getElementById("computerScore").innerHTML = computer;
+    document.getElementById("final").innerHTML = "";
+    document.getElementById("computerChose").innerHTML = "";
+    document.getElementById("playerChose").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
 }
 
 let playerSelection = "";
